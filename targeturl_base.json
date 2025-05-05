@@ -43,10 +43,6 @@
     },
 
 
-
-
-
-
     {
         "ctr": "global_ko1",
         "url": "https://news.hada.io/new",
@@ -115,7 +111,6 @@
         }
     },
 
-
     {
         "ctr": "usa1",
         "url": "https://www.cnet.com/news/",
@@ -125,6 +120,18 @@
         "pattern": {
             "content": "article.c-ShortcodeContent", 
             "title": "h1.c-contentHeader_headline"
+        }
+    },
+
+    {
+        "ctr": "zh1",
+        "url": "https://tech.udn.com/tech/rank/newest",
+        "list_pattern": [
+            "article.wrapper-body-list figure"
+        ],
+        "pattern": {
+            "content": "section .story-article", 
+            "title": "section .story-title"
         }
     }
 
