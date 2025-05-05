@@ -132,7 +132,7 @@ if __name__ == "__main__":
 Translate to Korean.
 Create a short, clickbait title based on the article.
 Title should be 20-30 characters.
-Add country name in [Country] format at the start.
+Add the country being discussed in [Country] format at the start.
 Avoid controversial titles.
 Return only the title text.
 No sources.
