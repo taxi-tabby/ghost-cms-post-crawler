@@ -178,11 +178,11 @@ Write in Korean.
                 custom_prompt="""
 Read the text.
 Choose relevant keywords from the options below.
-These keywords will be used to search images in the Unsplash API.
+The keywords will be used to search images in the Unsplash API.
 Make sure the keywords are short, clear, and specific.
 Avoid using general or cliché terms.
 Use only English.
-Return Example: AI, Technology, Innovation
+Return keywords in a simple comma-separated list (e.g., Electric scooter, Micromobility, Sharing service).
                 """,
                 html_content=html, 
                 selector_map=DATA_PATTERN
