@@ -120,9 +120,9 @@ class GhostCmsClient:
             user = head_image_data.get("user", "")
             user_profile = head_image_data.get("user_profile", "")
             if user and user_profile:
-                featured_image_caption = f"Photo by <a href='{user_profile}'>{user}</a> on Unsplash"
+                featured_image_caption = f"Unsplash 에 올려진 <a href='{user_profile}'>{user}</a> 님께서 찍은 사진."
             elif user:
-                featured_image_caption = f"Photo by {user} on Unsplash"
+                featured_image_caption = f"Unsplash 에 올려진 {user} 님께서 찍은 사진."
         
         
         # Check featured_image length and clear it if over 2000 bytes
