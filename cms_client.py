@@ -56,7 +56,7 @@ class GhostCmsClient:
             return None
         
         
-    def create_post(self, title, content, status="draft", tags=None, featured=False, head_image_data=None):
+    def create_post(self, title, content, status="draft", tags=None, featured=False, head_image_data=None, keyword=None):
         """Create a new post using the JWT token authentication"""
         # Get a valid token
         token = self.get_token()
@@ -85,6 +85,9 @@ class GhostCmsClient:
                         safe_length -= 1
                         
         
+        post_keyword = ""
+        if keyword:
+            post_keyword = keyword
         
         
         featured_image = ""
@@ -120,9 +123,9 @@ class GhostCmsClient:
             user = head_image_data.get("user", "")
             user_profile = head_image_data.get("user_profile", "")
             if user and user_profile:
-                featured_image_caption = f"Unsplash 에 올려진 <a href='{user_profile}'>{user}</a> 님께서 찍은 사진."
+                featured_image_caption = f"Unsplash 에 올려진 <a href='{user_profile}'>{user}</a> 님께서 찍은 사진. ({post_keyword})"
             elif user:
-                featured_image_caption = f"Unsplash 에 올려진 {user} 님께서 찍은 사진."
+                featured_image_caption = f"Unsplash 에 올려진 {user} 님께서 찍은 사진. ({post_keyword})"
         
         
         # Check featured_image length and clear it if over 2000 bytes

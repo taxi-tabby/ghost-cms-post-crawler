@@ -180,6 +180,8 @@ if __name__ == "__main__":
                 custom_prompt="""
                     내용을 읽고 아래 제공된 키워드에 해당하는 것을 조합해서 붙이세요.
                     Unsplash API에서 사진을 검색할 키워드로 사용됩니다.
+                    키워드는 짧고 간결해야 하지만 정형화되어선 안됨.
+                    키워드는 영문으로 작성되야 함.
                 """,
                 html_content=html, 
                 selector_map=DATA_PATTERN
@@ -194,6 +196,7 @@ if __name__ == "__main__":
             title=f"{post_title}",
             content=f"""{post_content}""",
             status="published",
+            keyword=post_keyword,
             tags=[
                 {"name": "News"},
                 {"name": "posts"},
