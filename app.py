@@ -184,7 +184,7 @@ These keywords will be used to search images in the Unsplash API.
 Make sure the keywords are short, clear, and specific.
 Avoid using general or cliché terms.
 Use only English.
-Example: AI, Technology, Innovation
+Return Example: AI, Technology, Innovation
                 """,
                 html_content=html, 
                 selector_map=DATA_PATTERN
