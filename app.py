@@ -129,14 +129,14 @@ if __name__ == "__main__":
         
         post_title = ai.extract_content_from_html(
                 custom_prompt="""
-                    (중요) 내용을 한국어로 번역해 주세요.
-                    기사 내용을 바탕으로 짧고 임팩트 있는 제목을 생성하세요.  
-                    제목은 클릭베이트 스타일로 간결하게 작성하고, 길이는 20-30자 사이로 설정해주세요.  
-                    제목 앞에 해당 내용이 어느 나라 이야기인지 [국가] 형태로 넣어주세요.
-                    문제의 여지나 논란이 있을 것 같은 제목을 최대한 피하세요.
-                    HTML 태그나 추가 포맷 없이 제목 텍스트만 반환하고, 추가 설명은 포함하지 마세요. 
-                    출처를 굳이 남기지 마세요. 기업이나 제품 등의 이름은 중요한 정보입니다.
-                    회사 명이나 기능 명칭 또는 특수 명사, 대명사 등은 굳이 번역할 필요 없으면 그대로 작성하세요.
+Translate to Korean.
+Create a short, clickbait title based on the article.
+Title should be 20-30 characters.
+Add country name in [Country] format at the start.
+Avoid controversial titles.
+Return only the title text.
+No sources.
+Keep company names and special terms in original form.
                 """,
                 html_content=html, 
                 selector_map=DATA_PATTERN
@@ -148,29 +148,27 @@ if __name__ == "__main__":
         
         post_content = ai.extract_content_from_html(
                 custom_prompt="""
-                    모든 내용을 한글로 요약하고 HTML 태그를 사용하여 포맷해주세요.  
-                    - <h1~6>는 주요 섹션에 골라서 사용하세요.  
-                    - <ul>/<li>는 핵심 사항이나 목록을 작성하는 데 사용하세요.  
-                    - <table>, <tr>, <td>는 데이터를 비교하거나 조직하는 데 사용하세요.  
-                    - <p>는 최소화하고 <ul>과 <table>을 우선적으로 사용하여 가독성을 높이세요.  
-                    - 중요한 사실은 <b> 또는 <strong>로 강조하세요.  
-                    - 참고할 내용은 <i> 또는 <em>로 강조하세요.
-                    - 인용구는 <blockquote>로 감싸세요.
-                    - 이미지나 비디오 링크는 최대한 사용하면 안됩니다, 정말 별 수 없다면 아스키 아트같이 비슷한 것을 생성하여 최대한 텍스트로 설명하도록 하세요.
-
-                    문제의 여지나 논란이 있을 것 같은 문장은 최대한 피하세요.
-                    간결하게 요약하고 핵심 정보에 집중하세요.
-                    요약 순서는
-                    - 발생한 사건 또는 문제에 대한 설명
-                    - 사건의 배경 또는 맥락
-                    - 핵심 요약 정보
-                    - 추후 예상되는 영향 또는 결과  
-                    HTML 형식으로만 반환하고, ```html과 같은 코드 블록 구분자나 추가 설명은 포함하지 마세요.
-                    
-                    내용을 개발 및 IT와 연관되도록 해야 해.
-                    출처를 굳이 남기지 마세요. 기업이나 제품 등의 이름은 중요한 정보입니다.
-                    회사 명이나 기능 명칭 또는 특수 명사, 대명사 등은 굳이 번역할 필요 없으면 그대로 작성하세요.
-                    (중요) 내용을 한국어로 번역해 주세요.
+Summarize the given text and write it in HTML format.
+Use <h1~6> for sections.
+Use <ul>, <li> for lists and key points.
+Use <table>, <tr>, <td> for data comparison.
+Minimize <p>, prioritize <ul> and <table>.
+Use <b>, <strong> for important points.
+Use <i>, <em> for reference points.
+Use <blockquote> for quotes.
+Do not use images or videos, describe with text.
+Avoid controversial sentences.
+Summarize only key information.
+Follow this order:
+Event description
+Background
+Key points
+Expected impact
+Only use HTML format.
+Focus on development and IT.
+Do not include sources.
+Keep company and product names as is.
+Write in Korean.
                 """,
                 html_content=html, 
                 selector_map=DATA_PATTERN
