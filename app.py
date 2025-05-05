@@ -148,27 +148,27 @@ Keep company names and special terms in their original form.
         
         post_content = ai.extract_content_from_html(
                 custom_prompt="""
-Summarize the given text and write it in HTML format.
-Use <h1~6> for sections.
-Use <ul>, <li> for lists and key points.
-Use <table>, <tr>, <td> for data comparison.
-Minimize <p>, prioritize <ul> and <table>.
-Use <b>, <strong> for important points.
-Use <i>, <em> for reference points.
-Use <blockquote> for quotes.
-Do not use images or videos, describe with text.
-Avoid controversial sentences.
-Summarize only key information.
-Follow this order:
-Event description
-Background
-Key points
-Expected impact
-Only use HTML format.
-Focus on development and IT.
-Do not include sources.
-Keep company and product names as is.
-Write in Korean.
+Summarize the given text and write it in HTML format in Korean.
+    -Use <h1~6> for section titles.
+    -Use <ul>, <li> for lists and key points.
+    -Use <table>, <tr>, <td> for data comparison.
+    -Minimize the use of <p>; prioritize <ul> and <table>.
+    -Use <b>, <strong> to emphasize important points.
+    -Use <i>, <em> for reference points.
+    -Use <blockquote> for quotes.
+    -Do not use images or videos; describe with text instead.
+    -Avoid controversial or ambiguous sentences.
+    -Summarize only the key information.
+    -Follow this order:
+        1.Event description
+        2.Background
+        3.Key points
+        4.Expected impact
+    -Only use HTML format.
+    -Focus on development and IT-related content.
+    -Do not include sources.
+    -Keep company names and product names as is.
+    -Write the output in Korean.
                 """,
                 html_content=html, 
                 selector_map=DATA_PATTERN
