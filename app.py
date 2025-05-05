@@ -178,12 +178,13 @@ if __name__ == "__main__":
         
         post_keyword = ai.extract_content_from_html(
                 custom_prompt="""
-Read the content and combine relevant keywords from the options provided below.
-These keywords will be used for searching photos in the Unsplash API.
-Keywords should be short and concise, but not too generic or formulaic.
-Keywords must be in English only.
+Read the text.
+Choose relevant keywords from the options below.
+These keywords will be used to search images in the Unsplash API.
+Make sure the keywords are short, clear, and specific.
+Avoid using general or cliché terms.
+Use only English.
 Example: AI, Technology, Innovation
-                    
                 """,
                 html_content=html, 
                 selector_map=DATA_PATTERN
