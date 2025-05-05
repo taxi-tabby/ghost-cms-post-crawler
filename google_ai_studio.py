@@ -16,12 +16,12 @@ class GeminiClient:
         """
         self.api_key = api_key
         
-    def generate_content(self, model="gemini-2.0-flash", prompt="", temperature=None, max_tokens=None):
+    def generate_content(self, model="gemini-2.0-flash-lite", prompt="", temperature=None, max_tokens=None):
         """
         Generate content using the Gemini API.
         
         Args:
-            model (str): Model name to use (default: gemini-2.0-flash)
+            model (str): Model name to use (default: gemini-2.0-flash-lite)
             prompt (str): Text prompt for the model
             temperature (float, optional): Controls randomness (0.0-1.0)
             max_tokens (int, optional): Maximum number of tokens to generate
@@ -54,7 +54,7 @@ class GeminiClient:
         
         return response.json()
     
-    def get_text_response(self, prompt, model="gemini-2.0-flash"):
+    def get_text_response(self, prompt, model="gemini-2.0-flash-lite"):
         """
         Get just the text response from the Gemini API.
         

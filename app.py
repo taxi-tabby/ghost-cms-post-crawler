@@ -139,7 +139,7 @@ No sources.
 Keep company names and special terms in original form.
                 """,
                 html_content=html, 
-                selector_map=DATA_PATTERN
+                selector_map=DATA_PATTERN,
             )
         
 
