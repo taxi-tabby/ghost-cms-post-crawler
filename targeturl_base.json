@@ -1,0 +1,138 @@
+[
+    {
+        "ctr": "jp1",
+        "url": "https://www.itmedia.co.jp/news/subtop/saaslab/",
+        "list_pattern": [
+            "#colBoxTopStories",
+            "#colBoxTabA > section > div > div > article",
+            "#colBoxTabB > section > div > div > article",
+            "#colBoxTabC > section > div > div > article",
+            "#colBoxTabD > section > div > div > article",
+            "#colBoxTabE > section > div > div > article"
+        ],
+        "pattern": {
+            "content": "#cmsBody > .inner", 
+            "title": "#cmsBody > #cmsTitle > .inner > .title > .title__maintext"
+        }
+    },
+    {
+        "ctr": "jp2",
+        "url": "https://www.itmedia.co.jp/news/subtop/security/",
+        "list_pattern": [
+            "#Pickup .colBoxIndex",
+            "#Newarticles .colBoxIndex"
+        ],
+        "pattern": {
+            "content": "#cmsBody > .inner", 
+            "title": "#cmsBody > #cmsTitle > .inner > .title > .title__maintext"
+        }
+    },
+
+    {
+        "ctr": "jp3",
+        "url": "https://xtech.nikkei.com/top/it/",
+        "list_pattern": [
+            "#main .-extralarge",
+            "#main .-medium",
+            "#main .-small"
+        ],
+        "pattern": {
+            "content": "main#main .articleBody", 
+            "title": "main#main h1.p-article_header_title"
+        }
+    },
+
+
+
+
+
+
+    {
+        "ctr": "global_ko1",
+        "url": "https://news.hada.io/new",
+        "list_pattern": [
+            "main article .topics .topicdesc"
+        ],
+        "pattern": {
+            "content": ".topic_contents", 
+            "title": "h1"
+        }
+    },
+
+    {
+        "ctr": "ko1",
+        "url": "https://news.naver.com/breakingnews/section/105/230",
+        "list_pattern": [
+            "div.section_latest_article .section_article > ul > li"
+        ],
+        "pattern": {
+            "content": "#contents", 
+            "title": "#title_area"
+        }
+    },
+    {
+        "ctr": "ko2",
+        "url": "https://news.naver.com/breakingnews/section/105/732",
+        "list_pattern": [
+            "div.section_latest_article .section_article > ul > li"
+        ],
+        "pattern": {
+            "content": "#contents", 
+            "title": "#title_area"
+        }
+    },
+    {
+        "ctr": "ko3",
+        "url": "https://news.naver.com/breakingnews/section/105/283",
+        "list_pattern": [
+            "div.section_latest_article .section_article > ul > li"
+        ],
+        "pattern": {
+            "content": "#contents", 
+            "title": "#title_area"
+        }
+    },
+    {
+        "ctr": "ko4",
+        "url": "https://news.naver.com/breakingnews/section/105/228",
+        "list_pattern": [
+            "div.section_latest_article .section_article > ul > li"
+        ],
+        "pattern": {
+            "content": "#contents", 
+            "title": "#title_area"
+        }
+    },
+    {
+        "ctr": "ko5",
+        "url": "https://www.aitimes.com/news/articleList.html",
+        "list_pattern": [
+            "#sections #section-list ul > li"
+        ],
+        "pattern": {
+            "content": "#article-view-content-div", 
+            "title": "h3.heading"
+        }
+    },
+
+
+    {
+        "ctr": "usa1",
+        "url": "https://www.cnet.com/news/",
+        "list_pattern": [
+            ".c-storiesNeonLatest_content"
+        ],
+        "pattern": {
+            "content": "article.c-ShortcodeContent", 
+            "title": "h1.c-contentHeader_headline"
+        }
+    }
+
+
+
+    
+
+
+]
+
+
