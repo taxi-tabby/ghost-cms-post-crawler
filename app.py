@@ -178,11 +178,11 @@ if __name__ == "__main__":
         
         post_keyword = ai.extract_content_from_html(
                 custom_prompt="""
-                    내용을 읽고 아래 제공된 키워드에 해당하는 것을 조합해서 붙이세요.
-                    Unsplash API에서 사진을 검색할 키워드로 사용됩니다.
-                    키워드는 짧고 간결해야 하지만 정형화되어선 안됨.
-                    키워드는 영어 단어만 써야함.
-                    예시: AI, Technology, Innovation
+Read the content and combine relevant keywords from the options provided below.
+These keywords will be used for searching photos in the Unsplash API.
+Keywords should be short and concise, but not too generic or formulaic.
+Keywords must be in English only.
+Example: AI, Technology, Innovation
                     
                 """,
                 html_content=html, 
