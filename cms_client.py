@@ -125,6 +125,14 @@ class GhostCmsClient:
                 featured_image_caption = f"Photo by {user} on Unsplash"
         
         
+        # Check featured_image length and clear it if over 2000 bytes
+        if featured_image and isinstance(featured_image, str):
+            if len(featured_image.encode('utf-8')) > 2000:
+                featured_image = ""
+                featured_image_alt = ""
+                featured_image_caption = ""
+                print("Featured image URL was too long (>2000 bytes), removing it")
+        
         
         # Ensure content is properly formatted as a string
         if content is None:
