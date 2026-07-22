@@ -110,10 +110,3 @@ python app.py --unsplash-access-key YOUR_UNSPLASH_KEY \
 - API 키는 절대 소스 코드에 직접 입력하지 마시고, 환경 변수나 별도의 설정 파일을 통해 관리하세요.
 - 과도한 요청으로 인한 API 사용량 제한에 주의하세요.
 
-## 적용 예시
-
-이 프로젝트를 통해 운영되는 사이트 예시:
-- [SmallBrain Lab Blog](https://blog.smallbrain-labo.work/)
-
-
-
